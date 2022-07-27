@@ -1,3 +1,151 @@
-h1{
-    color: pink;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+
+html {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+header{
+    height: 10vh;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    z-index: 1;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 0.2px solid #30eafb6a;
+    box-shadow: 0 4px 8px 0 #30eafb6a;
+    border-radius: 10px;
+    margin: 2vh 2vw;
+    padding: 2vh 5vw;
+}
+.container h3{
+    text-align: center;
+}
+.container > *{
+    margin-bottom: 5vh;
+}
+.sub-title{
+    color: #4EBFFF;
+}
+#selesai{
+    width: auto;
+    vertical-align: middle;
+    margin: 0;
+}
+.inputbuku > input{
+    width: 100%;
+}
+.form > input{
+    outline: none;
+    border-bottom: 1px solid black;
+    height: 2rem;
+    font-size: 0.9rem;
+    color: #757575;
+    margin-bottom: 3vh;
+}
+.form > input:focus{
+    border-bottom: 1px solid #4EBFFF;
+}
+.submitwrap{
+    position: relative;
+    height: 7vh;
+}
+.submitlabel{
+    width: 100%;
+    height: 100%;
+    padding-top: 1vh;
+    text-align: center;
+    color: #fff;
+    position: absolute; 
+    font-size: 0.9rem;
+}
+#submitbook{
+    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+.submitlabel:hover{
+    cursor: pointer;
+}
+.search{
+    display: flex;
+    align-items: center;
+}
+.search > input{
+    margin: 0;
+}
+#searchbook{
+    flex-grow: 2;
+    margin: 0 2vh;
+}
+#submitsearch{
+    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 0 5vw;
+}
+#submitbook:active, #submitbook:hover, #submitsearch:active, #submitsearch:hover, .options input:hover{
+    box-shadow: 0 8px 24px 0 #30eafb58;
+    cursor: pointer;
+    
+}
+.contentwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #4EBFFF;
+    border-radius: 10px;
+    
+}
+.material-symbols-outlined{
+    color: #4EBFFF;
+    margin: 3vh;
+}
+.details{
+    flex-grow: 2;
+    
+}
+.details p{
+    font-size: 0.8rem;
+    color: #757575;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.options input{
+    margin: 1vh;
+    padding: 1vh;
+    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+@media screen and (max-width: 768px){
+    html {
+        font-size: 18px;
+    }
 }

@@ -6,8 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badreads Bookshelf</title>
     <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <h1>hello world</h1>
+    <header>
+        <nav>
+            <h1 class="title">Badreads Bookshelf</h1>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h3 class="sub-title">Masukkan buku baru</h3>
+            <form action="#" class="form inputbuku">
+                <label for="judul" class="sub-title">Judul</label>
+                <input type="text" id="judul" name="judul" placeholder="Judul Buku" required>
+                <label for="penulis" class="sub-title">Penulis</label>
+                <input type="text" id="penulis" name="penulis" placeholder="Penulis Buku" required>
+                <label for="tahun" class="sub-title">Tahun</label>
+                <input type="text" id="tahun" name="tahun" placeholder="Tahun Terbit" required>
+                <label for="selesai" class="sub-title">Selesai dibaca</label>
+                <input type="checkbox" id="selesai" name="selesai" placeholder="Selesai dibaca">
+                <div class="submitwrap">
+                    <label for="submitbook" class="submitlabel">Masukkan buku ke rak <span class="shelfname"><b><br>Selesai Dibaca</b></span></label>
+                    <input type="submit" name="submitbook" id="submitbook" value="">
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h3 class="sub-title">Cari buku</h3>
+            <form action="#" class="form search">
+                <label for="searchbook" class="sub-title">Judul: </label>
+                <input type="text" id="searchbook" name="searchbook" placeholder="Cari judul buku">
+                <input type="submit" name="submitsearch" id="submitsearch" value="Cari">
+            </form>
+        </div>
+        <div class="container">
+            <h3 class="sub-title">Belum selesai dibaca</h3>
+            <div class="contentwrap">
+                <span class="material-symbols-outlined">
+                    menu_book
+                </span>
+                <div class="details">
+                    <h4 class="sub-title">Title</h4>
+                    <p>Penulis</p>
+                    <p>Tahun terbit</p>
+                </div>
+                <div class="options">
+                    <input type="button" value="Selesai dibaca">
+                    <input type="button" value="Hapus">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="sub-title">Selesai dibaca</h3>
+            <div class="contentwrap">
+                <span class="material-symbols-outlined">
+                    menu_book
+                </span>
+                <div class="details">
+                    <h4 class="sub-title">Title</h4>
+                    <p>Penulis</p>
+                    <p>Tahun terbit</p>
+                </div>
+                <div class="options">
+                    <input type="button" value="Selesai dibaca">
+                    <input type="button" value="Hapus">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/script.js" type="text/javascript"></script>
 </body>
 </html>
