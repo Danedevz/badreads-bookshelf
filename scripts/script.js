@@ -6,18 +6,30 @@ document.addEventListener("DOMContentLoaded", () => {
     loadStorage();
     addBook();
 
-    const kotakSelesai = document.getElementById('selesai');
-    const shelfname = document.querySelector('.shelfname');
-    kotakSelesai.addEventListener('click', (e)=>{
-        if (e.target.checked == true){
-            shelfname.innerText = "Selesai Dibaca"
+    const kotakSelesai = document.getElementById("selesai");
+    const shelfname = document.querySelector(".shelfname");
+    kotakSelesai.addEventListener("click", (e) => {
+        if (e.target.checked == true) {
+            shelfname.innerText = "Selesai Dibaca";
         } else {
-            shelfname.innerText = " Belum Selesai Dibaca"
-            
+            shelfname.innerText = " Belum Selesai Dibaca";
         }
-    })
+    });
     const submitbook = document.getElementById("submitbook");
     submitbook.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (!document.getElementById("judul").value) {
+            alert("Mohon isi judul buku");
+            return;
+        }
+        if (!document.getElementById("penulis").value) {
+            alert("Mohon isi penulis buku");
+            return;
+        }
+        if (!document.getElementById("tahun").value) {
+            alert("Mohon isi tahun terbit buku");
+            return;
+        }
         const title = document.getElementById("judul").value;
         const author = document.getElementById("penulis").value;
         const year = parseInt(document.getElementById("tahun").value);
@@ -32,16 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         addBook();
         saveBook();
-        e.preventDefault();
     });
-
     const search = document.getElementById("submitsearch");
     search.addEventListener("click", (e) => {
         const searchvalue = document.getElementById("searchbook").value;
         filterShelfItem(searchvalue);
         e.preventDefault();
     });
-
     const recoverItem = document.querySelector(".recover");
     const modal = document.querySelector(".modal-alert");
     recoverItem.addEventListener("click", () => {
@@ -178,7 +187,6 @@ const filterShelfItem = (search) => {
     shelf = result;
     addBook();
 };
-//initiating localStorage
 const isStorageExist = () => {
     if (typeof Storage == undefined) {
         alert("browser anda tidak mendukung web storage");
@@ -192,7 +200,6 @@ const saveBook = () => {
         localStorage.setItem(STORAGE_KEY, parsedShelf);
     }
 };
-
 const showModal = () => {
     const modal = document.querySelector(".modal-alert");
     modal.style.display = "flex";
@@ -200,7 +207,6 @@ const showModal = () => {
         modal.style.display = "none";
     }, 5000);
 };
-
 const recover = () => {
     shelf.push(recycleBin[0]);
     addBook();
