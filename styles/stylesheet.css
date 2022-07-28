@@ -204,4 +204,7 @@ nav {
     .container {
         margin: 2vh 2vw;
     }
+    .modal-wrap{
+        width: 85vw;
+    }
 }
