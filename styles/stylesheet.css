@@ -2,17 +2,14 @@
     margin: 0;
     padding: 0;
     border: 0;
-    
 }
-
 html {
     font-size: 20px;
     font-family: sans-serif;
 }
-header{
+header {
     height: 10vh;
 }
-
 nav {
     position: fixed;
     display: flex;
@@ -20,41 +17,41 @@ nav {
     align-items: center;
     width: 100%;
     height: 10vh;
-    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+    background-image: linear-gradient(to right, #30e9fb, #4ebfff);
     text-align: center;
     vertical-align: middle;
     color: #fff;
     z-index: 1;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     border: 0.2px solid #30eafb6a;
     box-shadow: 0 4px 8px 0 #30eafb6a;
     border-radius: 10px;
-    margin: 2vh 2vw;
+    margin: 2vh 20vw;
     padding: 2vh 5vw;
 }
-.container h3{
+.container h3 {
     text-align: center;
 }
-.container > *{
+.container > * {
     margin-bottom: 5vh;
 }
-.sub-title{
-    color: #4EBFFF;
+.sub-title {
+    color: #4ebfff;
 }
-#selesai{
+#selesai {
     width: auto;
     vertical-align: middle;
     margin: 0;
 }
-.inputbuku > input{
+.inputbuku > input {
     width: 100%;
 }
-.form > input{
+.form > input {
     outline: none;
     border-bottom: 1px solid black;
     height: 2rem;
@@ -62,92 +59,149 @@ nav {
     color: #757575;
     margin-bottom: 3vh;
 }
-.form > input:focus{
-    border-bottom: 1px solid #4EBFFF;
+.form > input:focus {
+    border-bottom: 1px solid #4ebfff;
 }
-.submitwrap{
+.submitwrap {
     position: relative;
     height: 7vh;
 }
-.submitlabel{
+.submitlabel {
     width: 100%;
     height: 100%;
     padding-top: 1vh;
     text-align: center;
     color: #fff;
-    position: absolute; 
+    position: absolute;
     font-size: 0.9rem;
 }
-#submitbook{
-    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+#submitbook {
+    background-image: linear-gradient(to right, #30e9fb, #4ebfff);
     border-radius: 10px;
     width: 100%;
     height: 100%;
     font-size: 0;
 }
-.submitlabel:hover{
+.submitlabel:hover {
     cursor: pointer;
 }
-.search{
+.shelfname{
+    font-weight: bold;
+    font-style: italic;
+}
+.search {
     display: flex;
     align-items: center;
 }
-.search > input{
+.search > input {
     margin: 0;
 }
-#searchbook{
+#searchbook {
     flex-grow: 2;
     margin: 0 2vh;
 }
-#submitsearch{
-    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+#submitsearch {
+    background-image: linear-gradient(to right, #30e9fb, #4ebfff);
     border-radius: 10px;
     border: none;
     color: #fff;
     padding: 0 5vw;
 }
-#submitbook:active, #submitbook:hover, #submitsearch:active, #submitsearch:hover, .options input:hover{
+#submitbook:active,
+#submitbook:hover,
+#submitsearch:active,
+#submitsearch:hover,
+.options input:hover {
     box-shadow: 0 8px 24px 0 #30eafb58;
     cursor: pointer;
-    
 }
-.sudahSelesai, .belumSelesai{
+.sudahSelesai,
+.belumSelesai {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #4EBFFF;
+    border: 1px solid #4ebfff;
     border-radius: 10px;
     margin-bottom: 5vh;
-    
 }
-.material-symbols-outlined{
-    color: #4EBFFF;
+.material-symbols-outlined {
+    color: #4ebfff;
     margin: 3vh;
+    font-size: 2rem;
 }
-.details{
+.details {
     flex-grow: 2;
-    
 }
-.details p{
+.details p {
     font-size: 0.8rem;
     color: #757575;
 }
-.options{
+.options {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-.options input{
+.options input {
     margin: 1vh;
     padding: 1vh;
-    background-image: linear-gradient(to right, #30E9FB, #4EBFFF);
+    background-image: linear-gradient(to right, #30e9fb, #4ebfff);
     border-radius: 5px;
     border: none;
     color: #fff;
     width: 90px;
 }
-@media screen and (max-width: 768px){
+.modal-alert {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    bottom: 5vh;
+    z-index: 3;
+    width: 100%;
+    animation-name: float-in;
+    animation-duration: 0.4s;
+}
+.modal-wrap {
+    width: 40vw;
+    background-color: #d13241;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.modal-wrap > span {
+    color: #fff;
+}
+.alert-icon {
+    font-size: 3rem;
+}
+.alert-msg {
+    flex-grow: 2;
+}
+.recover {
+    font-weight: bold;
+}
+.recover:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+@keyframes float-in {
+    from {
+        bottom: -10px;
+        opacity: 0;
+    }
+    to {
+        bottom: 5vh;
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 768px) {
     html {
         font-size: 18px;
+    }
+    .container {
+        margin: 2vh 2vw;
     }
 }

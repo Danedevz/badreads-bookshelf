@@ -25,9 +25,9 @@
                 <label for="tahun" class="sub-title">Tahun</label>
                 <input type="text" id="tahun" name="tahun" placeholder="Tahun Terbit" required>
                 <label for="selesai" class="sub-title">Selesai dibaca</label>
-                <input type="checkbox" id="selesai" name="selesai" placeholder="Selesai dibaca">
+                <input type="checkbox" id="selesai" name="selesai" placeholder="Selesai dibaca" required>
                 <div class="submitwrap">
-                    <label for="submitbook" class="submitlabel">Masukkan buku ke rak <span class="shelfname"><b><br>Selesai Dibaca</b></span></label>
+                    <label for="submitbook" class="submitlabel">Masukkan buku ke rak<br><span class="shelfname"></span></label>
                     <input type="submit" name="submitbook" id="submitbook" value="">
                 </div>
             </form>
@@ -77,6 +77,14 @@
                         <input type="button" id="hapus" value="Hapus">
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal-alert">
+            <div class="modal-wrap">
+                <span class="material-symbols-outlined alert-icon">
+                    cancel
+                </span>
+                <p class="alert-msg">Item telah berhasil dihapus. <span class="recover">Pulihkan?</span></p>
             </div>
         </div>
     </main>
