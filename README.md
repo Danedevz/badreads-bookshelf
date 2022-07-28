@@ -6,4 +6,12 @@ Tech stack used:
 - HTML
 - CSS
 - Javascript
-- Bootstrap
+
+Additional elements:
+- Google Material Icon
+
+Features included:
+- Adding reading list(s)
+- Delete reading list(s)
+- Switching between shelves (completed / not completed)
+- Reading list one-time recovery
