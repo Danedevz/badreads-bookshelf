@@ -97,7 +97,7 @@ nav {
     margin: 0;
 }
 #searchbook {
-    flex-grow: 2;
+    flex-grow: 1;
     margin: 0 2vh;
 }
 #submitsearch {
@@ -105,7 +105,7 @@ nav {
     border-radius: 10px;
     border: none;
     color: #fff;
-    padding: 0 5vw;
+    padding: 0 2vw;
 }
 #submitbook:active,
 #submitbook:hover,
@@ -148,7 +148,7 @@ nav {
     border-radius: 5px;
     border: none;
     color: #fff;
-    width: 90px;
+    width: 95px;
 }
 .modal-alert {
     position: fixed;
