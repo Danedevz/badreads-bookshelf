@@ -111,12 +111,13 @@ nav {
     cursor: pointer;
     
 }
-.contentwrap{
+.sudahSelesai, .belumSelesai{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #4EBFFF;
     border-radius: 10px;
+    margin-bottom: 5vh;
     
 }
 .material-symbols-outlined{
@@ -143,6 +144,7 @@ nav {
     border-radius: 5px;
     border: none;
     color: #fff;
+    width: 90px;
 }
 @media screen and (max-width: 768px){
     html {
